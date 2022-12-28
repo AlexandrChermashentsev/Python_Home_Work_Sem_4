@@ -3,14 +3,16 @@
 
 import random
 
-my_list = []
-for _ in range(10):
-    my_list.append(random.randint(0, 9))
+my_list = [random.randint(0, 9) for i in range(10)]
 print(my_list)
 
-new_list =[]
-for i in range(10):
-    if i in my_list:
-        new_list.append(i)
-
-print(new_list)
+uniqe_list = [] # Метод поиска уникальных объектов в списке
+count = 0
+for i in my_list:
+    count = 0
+    for j in range(10):
+        if i == my_list[j]:
+            count += 1
+    if count <= 1:
+        uniqe_list.append(i)
+print(uniqe_list)
