@@ -16,9 +16,9 @@ elements_of_formula = []
 for i in range(user_degree, -1, -1):
     random_number = random.randint(0, 100)
     if i > 1 and random_number != 0:
-        elements_of_formula.append(str(random_number) + 'x^'+ str(i))
+        elements_of_formula.append(str(random_number) + '*x**'+ str(i))
     elif i == 1 and random_number != 0: 
-        elements_of_formula.append(str(random_number) + 'x')
+        elements_of_formula.append(str(random_number) + '*x')
     elif i == 0 and random_number != 0:
         elements_of_formula.append(str(random_number))
 
